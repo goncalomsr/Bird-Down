@@ -1,0 +1,12 @@
+{
+    "name": "gameControls",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "7babb41b-8933-49a3-9129-e847efa24ce6",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}

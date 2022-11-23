@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 804606315917688688}
   - component: {fileID: 4760876040446808408}
   - component: {fileID: -227211350107465101}
+  - component: {fileID: 3246046221713204207}
+  - component: {fileID: 8568335813427446471}
   m_Layer: 0
   m_Name: Target
   m_TagString: Enemy
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804606315917688694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.8799925, y: 3.4375217, z: -1.3530428}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -96,7 +98,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1995720272617593764, guid: 1b0b3f82782dff44a95594016b68b119, type: 3}
 --- !u!95 &-227211350107465101
@@ -119,3 +121,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3246046221713204207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804606315917688694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d009e00abb8ea419f56ab86d14375c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: -227211350107465101}
+  enemyLerping: 1
+  enemySpeed: 2
+--- !u!135 &8568335813427446471
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804606315917688694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.031460475
+  m_Center: {x: -0.00052158535, y: 0.023454381, z: 0.010921413}
