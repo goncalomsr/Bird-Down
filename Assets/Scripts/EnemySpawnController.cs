@@ -5,19 +5,21 @@ using UnityEngine;
 public class EnemySpawnController : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    
+
+    [HeaderAttribute ("Spawn Settings")] 
     public float enemySpawnTimer = 3f;
     public float enemySpeed = 2f;
-
-    public float randomPosX;
-    public float randomPosY;
-    public float randomPosZ;
-
+    private float randomPosX;
+    private float randomPosY;
+    private float randomPosZ;
     public Vector3 enemyPosition;
     public Vector3 enemyHitTargetPosition;
 
+    [HeaderAttribute("Enemy Target")]
     public GameObject enemyHitTarget;
 
+    [HeaderAttribute("Wave Settings")]
+    private bool enemyWave = true;
     private int enemyCount;
 
     private void Start()
@@ -28,29 +30,25 @@ public class EnemySpawnController : MonoBehaviour
 
     IEnumerator SpawnEnemy()
     {
-        while (enemyCount < 10)
+        while (enemyWave)
         {
-            randomPosX = Random.Range(-15f, 15f);
-            randomPosY = Random.Range(0f, 10f);
-            randomPosZ = Random.Range(-15f, 15f);
-            enemyPosition = new Vector3(randomPosX, randomPosY, randomPosZ);
-            Instantiate(enemyPrefab, enemyPosition, gameObject.transform.rotation);
-            //enemyPrefab.transform.position = Vector3.Lerp(enemyPosition, enemyHitTargetPosition, enemySpeed * Time.deltaTime);
-            //enemyPrefab.transform.position = Vector3.MoveTowards(enemyPosition, enemyHitTargetPosition, enemySpeed * Time.deltaTime);
+            if (enemyCount < 10)
+            {
+                randomPosX = Random.Range(-15f, 15f);
+                randomPosY = Random.Range(0f, 10f);
+                randomPosZ = Random.Range(-15f, 15f);
+                enemyPosition = new Vector3(randomPosX, randomPosY, randomPosZ);
+                Instantiate(enemyPrefab, enemyPosition, gameObject.transform.rotation);
+
+                enemyCount++;
+            }
+            
             yield return new WaitForSeconds(enemySpawnTimer);
-            enemyCount += 1;
         }
     }
 
-    void Update()
+    public void DeductEnemyCount()
     {
-        if (enemyPrefab.transform.position != enemyHitTargetPosition)
-        {
-            enemyPrefab.transform.position = Vector3.MoveTowards(enemyPosition, enemyHitTargetPosition, enemySpeed * Time.deltaTime);
-        }
-        else
-        {
-            Destroy(enemyPrefab);
-        }
+        enemyCount--;
     }
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 804606315917688688}
   - component: {fileID: 4760876040446808408}
   - component: {fileID: -227211350107465101}
-  - component: {fileID: 3246046221713204207}
   - component: {fileID: 8568335813427446471}
   m_Layer: 0
   m_Name: Target
@@ -30,10 +29,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804606315917688694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.52614, y: 0.75187904, z: 0.05541527}
+  m_LocalPosition: {x: -3.2793813, y: 9.731938, z: 5.058356}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 2306154138524353538}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,21 +121,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3246046221713204207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804606315917688694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d009e00abb8ea419f56ab86d14375c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAnimator: {fileID: -227211350107465101}
-  enemyLerping: 1
-  enemySpeed: 2
 --- !u!135 &8568335813427446471
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -149,3 +134,100 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.031460475
   m_Center: {x: -0.00052158535, y: 0.023454381, z: 0.010921413}
+--- !u!1001 &2849550981114881001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 804606315917688690}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b0b3f82782dff44a95594016b68b119,
+        type: 3}
+      propertyPath: m_Name
+      value: Bird_Asset
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b0b3f82782dff44a95594016b68b119, type: 3}
+--- !u!4 &2306154138524353538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b0b3f82782dff44a95594016b68b119,
+    type: 3}
+  m_PrefabInstance: {fileID: 2849550981114881001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3119528157971668664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b0b3f82782dff44a95594016b68b119,
+    type: 3}
+  m_PrefabInstance: {fileID: 2849550981114881001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4279762447342208759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3119528157971668664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d009e00abb8ea419f56ab86d14375c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: -227211350107465101}
+  enemySpawnController: {fileID: 0}
+  enemyLerping: 1
+  enemySpeed: 2

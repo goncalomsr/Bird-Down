@@ -11,7 +11,7 @@ public class ProjectileSpawnPoint : MonoBehaviour
     [SerializeField] GameObject projectileSpawnPoint;
     [SerializeField] GameObject projectileObject;
 
-    private void Update()
+private void Update()
     {
         /// <summary>
         /// Condition to instanciate projectile

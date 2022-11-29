@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] float projectileForce = 50f;
     Rigidbody projectileRB;
     private float timeAfterInstanciate;
+    public EnemySpawnController enemySpawnController;
 
     private void Start()
     {
@@ -27,14 +28,5 @@ public class Projectile : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag.Equals("Enemy"))
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
     }
 }
